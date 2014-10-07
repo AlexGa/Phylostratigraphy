@@ -1,4 +1,4 @@
 Phylostratigraphy
 =================
 
-Pipeline for phylostratigraphic analysis.
+## Pipeline for phylostratigraphic analysis.
