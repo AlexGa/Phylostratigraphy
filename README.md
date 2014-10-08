@@ -5,7 +5,7 @@ This project builds up a pipeline for phylostratigraphy. It uses BLAST to trace 
 
 ####Phylostratigraphy####
 
-Phylostratigraphy was introduced by Domazet-Lo&scaron;o et al. in 2007. The aim of this procedure is to group genes by their phylogenetic origin to uncover footprints of important adaptive events in evolution.
+Phylostratigraphy was introduced by <a href="http://www.sciencedirect.com/science/article/pii/S0168952507002995">Domazet-Lo&scaron;o et al. in 2007</a>. The aim of this procedure is to group genes by their phylogenetic origin to uncover footprints of important adaptive events in evolution.
 It is a statistical approach to reconstruct macroevolutionary trends based on the assumption of punctuated emergence of protein families.
 
 
