@@ -10,4 +10,4 @@ It is a statistical approach to reconstruct macroevolutionary trends based on th
 
 ==================
 
-This project builds up a pipeline for phylostratigraphy. It uses BLAST to trace the evolutionary origins based on the curated  non-redundant database of NCBI. The pipeline also implements parsers for BLAST output and an interface to MonetDB for further analysis.
+This project builds up a pipeline for phylostratigraphy. It uses BLAST to trace the evolutionary origins based on the curated  non-redundant database of <a href="http://www.ncbi.nlm.nih.gov/">NCBI</a>. The pipeline also implements parsers for BLAST output and an interface to <a href="http://www.monetdb.com/">MonetDB</a> for further analysis.
