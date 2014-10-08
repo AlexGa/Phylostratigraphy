@@ -1,7 +1,7 @@
-Phylostratigraphy
+Phylostratigraphic analysis
 =================
 
-####Pipeline for phylostratigraphic analysis.####
+####Phylostratigraphy####
 
 
 Phylostratigraphy was introduced by Domazet-Lo&scaron;o et al. in 2007. The aim of this procedure is to group genes by their phylogenetic origin to uncover footprints of impotant adaptive events in evolution.
