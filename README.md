@@ -6,3 +6,8 @@ Phylostratigraphic analysis
 
 Phylostratigraphy was introduced by Domazet-Lo&scaron;o et al. in 2007. The aim of this procedure is to group genes by their phylogenetic origin to uncover footprints of impotant adaptive events in evolution.
 It is a statistical approach to reconstruct macroevolutionary trends based on the assumption of punctuated emergence of protein families.
+
+
+==================
+
+This project builds up a pipeline for phylostratigraphy. It uses BLAST to trace the evolutionary origins based on the curated  non-redundant database of NCBI. The pipeline also implements parsers for BLAST output and an interface to MonetDB for further analysis.
