@@ -35,8 +35,9 @@ or
 ```
 
 5) Use the following command to start the Perl script<br />
-```terminal
+```shell
 perl createPSmap.pl [--organism organism_proteom.fasta] [--seqOffset 50] [--evalue 1e-5] [--threads 1]  [--blastPlus] [--help]
+
 -o --organism     FASTA file with amino acis sequences containing the proteom
 -d --database     BLAST database
 -p --prefix       prefix for output files 
@@ -45,6 +46,7 @@ perl createPSmap.pl [--organism organism_proteom.fasta] [--seqOffset 50] [--eval
 -b --blastPlus    BLAST+ is used for similarity searches otherwise 'blastall -p blastp' is used
 -h --help         print this message
 ```
+
 E.g. Starting pipeline for *A. thaliana* using BLAST (`blastall -p blastp`) for similarity searches<br />
 ```terminal
 perl createPSmap.pl --organism Athaliana_167_protein_with_new_Header.fa --seqOffset 50  --evalue 1e-5 --threads 60
