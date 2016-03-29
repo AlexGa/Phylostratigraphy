@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Phylostratigraphic analysis
 =================
 
@@ -12,4 +11,3 @@ It is a statistical approach to reconstruct macroevolutionary trends based on th
 
 =======
 # Phylostratigraphy
->>>>>>> origin/master
