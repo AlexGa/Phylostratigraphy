@@ -22,13 +22,13 @@ my $threads = 1;
 my $blastPlus;
 
 GetOptions('help' => \$help,
-           'organism=s' => \$refOrg,
-           'database=s' => \$db,
-           'seqOffset=i' => \$seqOffset,
-           'evalue=i' => \$evalue,
-           'threads=i' => \$threads,
-           'prefix=s' => \$outputPrefix,
-           'blastPlus' => \$blastPlus);
+'organism=s' => \$refOrg,
+'database=s' => \$db,
+'seqOffset=i' => \$seqOffset,
+'evalue=i' => \$evalue,
+'threads=i' => \$threads,
+'prefix=s' => \$outputPrefix,
+'blastPlus' => \$blastPlus);
 
 if(defined $help){
   usage();
@@ -152,7 +152,7 @@ sub usage
   print "-p --prefix \t\t prefix for output files \n";
   print "-s --seqOffset \t\t size of a package the FASTA file should split in (default: 50)\n";
   print "-e --evalue \t\t E-value for BLAST comparisons and assignment of protein coding genes to their phylostratum (default: 1e-5)\n";
-  print "-b --blastPlus \t\t BLAST+ is used for similarity searches otherwise using \'blastall -p blastp\'\n";
+  print "-b --blastPlus \t\t BLAST+ is used for similarity searches otherwise \'blastall -p blastp\' is used\n";
   print "-h --help \t\t print this message\n";
   exit;
 }
