@@ -38,6 +38,7 @@ or
 ```terminal
 perl createPSmap.pl [--organism organism_proteom.fasta] [--seqOffset 50] [--evalue 1e-5] [--threads 1]  [--blastPlus] [--help]
 
+Arguments:
 -o --organism     FASTA file with amino acis sequences containing the proteom
 -d --database     BLAST database
 -p --prefix       prefix for output files 
