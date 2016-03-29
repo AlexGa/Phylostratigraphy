@@ -129,7 +129,7 @@ or
 &gt;YP_001514406.1 | [Acaryochloris marina MBIC11017] | [Bacteria; Cyanobacteria; Oscillatoriophycideae; Chroococcales; Acaryochloris; Acaryochloris marina]
 or
 &gt;ATCG00500.1|PACid:19637947 | [Arabidopsis thaliana] | [Eukaryota; Viridiplantae; Streptophyta; Streptophytina; Embryophyta; Tracheophyta; Euphyllophyta; Spermatophyta; Magnoliophyta; eudicotyledons; core eudicotyledons; rosids; malvids; Brassicales; Brassicaceae; Camelineae; Arabidopsis]</code></pre></li>
-<li><p>Use the following command to start the Perl script<br /> ```shell perl createPSmap.pl [–organism organism_proteom.fasta] [–seqOffset 50] [–evalue 1e-5] [–threads 1] [–blastPlus] [–help]</p></li>
+<li><p>Use the following command to start the Perl script<br /> ```terminal perl createPSmap.pl [–organism organism_proteom.fasta] [–seqOffset 50] [–evalue 1e-5] [–threads 1] [–blastPlus] [–help]</p></li>
 </ol>
 <p>-o –organism FASTA file with amino acis sequences containing the proteom -d –database BLAST database -p –prefix prefix for output files -s –seqOffset size of a package the FASTA file should split in (default: 50) -e –evalue E-value for BLAST comparisons and assignment of protein coding genes to their phylostratum (default: 1e-5) -b –blastPlus BLAST+ is used for similarity searches otherwise ‘blastall -p blastp’ is used -h –help print this message ```</p>
 <p>E.g. Starting pipeline for <em>A. thaliana</em> using BLAST (<code>blastall -p blastp</code>) for similarity searches<br /></p>
