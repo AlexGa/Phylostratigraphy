@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Phylostratigraphic analysis
 =================
 
@@ -9,3 +10,6 @@ Phylostratigraphy was introduced by <a href="http://www.sciencedirect.com/scienc
 It is a statistical approach to reconstruct macroevolutionary trends based on the assumption of punctuated emergence of protein families.
 
 
+=======
+# Phylostratigraphy
+>>>>>>> origin/master
