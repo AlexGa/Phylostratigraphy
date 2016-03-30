@@ -120,6 +120,7 @@ $(document).ready(function () {
 <p>It can be performed by using the Perl script <code>createPSmap.pl</code>. The resulting phylostratigraphic map stores the phylostratum in the first column and the corresponding gene id in the second column.</p>
 <p>For creating the phylostratigraphic map the following steps have to be done:</p>
 <ol style="list-style-type: decimal">
+<li><p>Download <code>createPSmap.pl</code> and <code>ParseXMLtoPS.jar</code> and store both files in the same directory.</p></li>
 <li><p>Make sure that BLAST is installed on your machine. You can choose between BLAST (<a href="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/release/LATEST/" class="uri">ftp://ftp.ncbi.nlm.nih.gov/blast/executables/release/LATEST/</a>) and BLAST+ (<a href="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/" class="uri">ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/</a>)</p></li>
 <li><p>Download the sequence database <a href="http://msbi.ipb-halle.de/download/phyloBlastDB_Drost_Gabel_Grosse_Quint.fa.tbz">phyloBlastDB_Drost_Gabel_Grosse_Quint.fa</a> used for BLAST searches and unpack it <code>tar xfvj phyloBlastDB_Drost_Gabel_Grosse_Quint.fa.tbz</code></p></li>
 <li><p>Format the BLAST sequence database.<br /> If you are using BLAST<br /> <code>formatdb -p T -i phyloBlastDB_Drost_Gabel_Grosse_Quint.fa</code><br /> or, if you are using BLAST+<br /> <code>makeblastdb -dbtype prot -in phyloBlastDB_Drost_Gabel_Grosse_Quint.fa</code><br /></p></li>

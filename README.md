@@ -12,18 +12,20 @@ It can be performed by using the Perl script `createPSmap.pl`. The resulting phy
 
 For creating the phylostratigraphic map the following steps have to be done:
 
-1) Make sure that BLAST is installed on your machine. You can choose between BLAST (ftp://ftp.ncbi.nlm.nih.gov/blast/executables/release/LATEST/) and BLAST+ (ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
+1) Download `createPSmap.pl` and `ParseXMLtoPS.jar` and store both files in the same directory.
 
-2) Download the sequence database <a href="http://msbi.ipb-halle.de/download/phyloBlastDB_Drost_Gabel_Grosse_Quint.fa.tbz">phyloBlastDB_Drost_Gabel_Grosse_Quint.fa</a> used for BLAST searches and unpack it 
+2) Make sure that BLAST is installed on your machine. You can choose between BLAST (ftp://ftp.ncbi.nlm.nih.gov/blast/executables/release/LATEST/) and BLAST+ (ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
+
+3) Download the sequence database <a href="http://msbi.ipb-halle.de/download/phyloBlastDB_Drost_Gabel_Grosse_Quint.fa.tbz">phyloBlastDB_Drost_Gabel_Grosse_Quint.fa</a> used for BLAST searches and unpack it 
 `tar xfvj phyloBlastDB_Drost_Gabel_Grosse_Quint.fa.tbz`
 
-3) Format the BLAST sequence database.<br />
+4) Format the BLAST sequence database.<br />
 If you are using BLAST<br />
 `formatdb -p T -i phyloBlastDB_Drost_Gabel_Grosse_Quint.fa`<br />
 or, if you are using BLAST+<br />
 `makeblastdb -dbtype prot -in phyloBlastDB_Drost_Gabel_Grosse_Quint.fa`<br />
 
-4) Make sure that the header of your FASTA-file of the organism you are interested in (e.g. Athaliana_167_protein.fa) fullfills the following specification:<br />
+5) Make sure that the header of your FASTA-file of the organism you are interested in (e.g. Athaliana_167_protein.fa) fullfills the following specification:<br />
 <code>>GeneID | [organism_name] | [taxonomy]</code><br />
 Notice, the taxonomy begins after the node "Cellular organisms" e.g.
 ```{terminal}
@@ -34,7 +36,7 @@ or
 >ATCG00500.1|PACid:19637947 | [Arabidopsis thaliana] | [Eukaryota; Viridiplantae; Streptophyta; Streptophytina; Embryophyta; Tracheophyta; Euphyllophyta; Spermatophyta; Magnoliophyta; eudicotyledons; core eudicotyledons; rosids; malvids; Brassicales; Brassicaceae; Camelineae; Arabidopsis]
 ```
 
-5) Use the following command to start the Perl script<br />
+6) Use the following command to start the Perl script<br />
 ```terminal
 perl createPSmap.pl [--organism organism_proteom.fasta] [--database blast_db] [--seqOffset 50] [--evalue 1e-5] [--threads 1]  [--blastPlus] [--help]
 
