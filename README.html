@@ -117,7 +117,7 @@ $(document).ready(function () {
 <p><strong>Phylostratigraphy</strong> was introduced by <a href="http://www.sciencedirect.com/science/article/pii/S0168952507002995">Domazet-Lošo et al. in 2007</a> to trace the evolutionary origin of protein coding genes. Thus, it groups genes by their phylogenetic origin to uncover footprints of important adaptive events in evolution. It is a statistical approach to reconstruct macroevolutionary trends based on the assumption of punctuated emergence of protein families.</p>
 <div id="performing-phylostratigraphy" class="section level2">
 <h2>Performing Phylostratigraphy</h2>
-<p>It can be performed by using the Perl script <code>createPsMap.pl</code>. The resulting phylostratigraphic map stores the phylostratum in the first column and the corresponding gene id in the second column.</p>
+<p>It can be performed by using the Perl script <code>createPSmap.pl</code>. The resulting phylostratigraphic map stores the phylostratum in the first column and the corresponding gene id in the second column.</p>
 <p>For creating the phylostratigraphic map the following steps have to be done:</p>
 <ol style="list-style-type: decimal">
 <li><p>Make sure that BLAST is installed on your machine. You can choose between BLAST (<a href="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/release/LATEST/" class="uri">ftp://ftp.ncbi.nlm.nih.gov/blast/executables/release/LATEST/</a>) and BLAST+ (<a href="ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/" class="uri">ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/</a>)</p></li>
@@ -129,13 +129,13 @@ or
 &gt;YP_001514406.1 | [Acaryochloris marina MBIC11017] | [Bacteria; Cyanobacteria; Oscillatoriophycideae; Chroococcales; Acaryochloris; Acaryochloris marina]
 or
 &gt;ATCG00500.1|PACid:19637947 | [Arabidopsis thaliana] | [Eukaryota; Viridiplantae; Streptophyta; Streptophytina; Embryophyta; Tracheophyta; Euphyllophyta; Spermatophyta; Magnoliophyta; eudicotyledons; core eudicotyledons; rosids; malvids; Brassicales; Brassicaceae; Camelineae; Arabidopsis]</code></pre></li>
-<li><p>Use the following command to start the Perl script<br /> ```terminal perl createPSmap.pl [–organism organism_proteom.fasta] [–seqOffset 50] [–evalue 1e-5] [–threads 1] [–blastPlus] [–help]</p></li>
+<li><p>Use the following command to start the Perl script<br /> ```terminal perl createPSmap.pl [–organism organism_proteom.fasta] [–database blast_db] [–seqOffset 50] [–evalue 1e-5] [–threads 1] [–blastPlus] [–help]</p></li>
 </ol>
 <p>Arguments: -o –organism FASTA file with amino acis sequences containing the proteom -d –database BLAST database -p –prefix prefix for output files -s –seqOffset size of a package the FASTA file should split in (default: 50) -e –evalue E-value for BLAST comparisons and assignment of protein coding genes to their phylostratum (default: 1e-5) -b –blastPlus BLAST+ is used for similarity searches otherwise ‘blastall -p blastp’ is used -h –help print this message ```</p>
 <p>E.g. Starting pipeline for <em>A. thaliana</em> using BLAST (<code>blastall -p blastp</code>) for similarity searches<br /></p>
-<pre class="terminal"><code>perl createPSmap.pl --organism Athaliana_167_protein_with_new_Header.fa --seqOffset 50  --evalue 1e-5 --threads 60</code></pre>
+<pre class="terminal"><code>perl createPSmap.pl --organism Athaliana_167_protein_with_new_Header.fa --database phyloBlastDB_Drost_Gabel_Grosse_Quint.faphyloBlastDB.fa --seqOffset 50  --evalue 1e-5 --threads 60</code></pre>
 <p>E.g. Starting pipeline for <em>A. thaliana</em> using BLAST+ for similarity searches<br /></p>
-<pre class="terminal"><code>perl createPSmap.pl --organism Athaliana_167_protein_with_new_Header.fa --seqOffset 50  --evalue 1e-5 --threads 60 --blastPlus</code></pre>
+<pre class="terminal"><code>perl createPSmap.pl --organism Athaliana_167_protein_with_new_Header.fa --database phyloBlastDB_Drost_Gabel_Grosse_Quint.faphyloBlastDB.fa --seqOffset 50  --evalue 1e-5 --threads 60 --blastPlus</code></pre>
 </div>
 </div>
 
