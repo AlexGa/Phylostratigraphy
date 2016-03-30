@@ -52,9 +52,9 @@ Arguments:
 
 E.g. Starting pipeline for *A. thaliana* using BLAST (`blastall -p blastp`) for similarity searches<br />
 ```terminal
-perl createPSmap.pl --organism Athaliana_167_protein_with_new_Header.fa --database phyloBlastDB_Drost_Gabel_Grosse_Quint.faphyloBlastDB.fa --seqOffset 50  --evalue 1e-5 --threads 60
+perl createPSmap.pl --organism Athaliana_167_protein_with_new_Header.fa --database phyloBlastDB_Drost_Gabel_Grosse_Quint.fa --seqOffset 50  --evalue 1e-5 --threads 60
 ```
 E.g. Starting pipeline for *A. thaliana* using BLAST+ for similarity searches<br />
 ```terminal
-perl createPSmap.pl --organism Athaliana_167_protein_with_new_Header.fa --database phyloBlastDB_Drost_Gabel_Grosse_Quint.faphyloBlastDB.fa --seqOffset 50  --evalue 1e-5 --threads 60 --blastPlus
+perl createPSmap.pl --organism Athaliana_167_protein_with_new_Header.fa --database phyloBlastDB_Drost_Gabel_Grosse_Quint.fa --seqOffset 50  --evalue 1e-5 --threads 60 --blastPlus
 ```
