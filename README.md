@@ -8,7 +8,7 @@ It is a statistical approach to reconstruct macroevolutionary trends based on th
 
 ##Performing Phylostratigraphy
 
-It can be performed by using the Perl script `createPsMap.pl`. The resulting phylostratigraphic map stores the phylostratum in the first column and the corresponding gene id in the second column.
+It can be performed by using the Perl script `createPSmap.pl`. The resulting phylostratigraphic map stores the phylostratum in the first column and the corresponding gene id in the second column.
 
 For creating the phylostratigraphic map the following steps have to be done:
 
