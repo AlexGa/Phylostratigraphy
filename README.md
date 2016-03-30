@@ -12,7 +12,7 @@ It can be performed by using the Perl script `createPSmap.pl`. The resulting phy
 
 For creating the phylostratigraphic map the following steps have to be done:
 
-1) Download `createPSmap.pl` and `ParseXMLtoPS.jar` and store both files in the same directory.
+1) Download the <a href ="https://github.com/AlexGa/Phylostratigraphy/releases">current release</a>. Store the files `createPSmap.pl` and `ParseXMLtoPS.jar` in the same directory.
 
 2) Make sure that BLAST is installed on your machine. You can choose between BLAST (ftp://ftp.ncbi.nlm.nih.gov/blast/executables/release/LATEST/) and BLAST+ (ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
 
