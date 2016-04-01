@@ -25,7 +25,7 @@ GetOptions('help' => \$help,
 'organism=s' => \$refOrg,
 'database=s' => \$db,
 'seqOffset=i' => \$seqOffset,
-'evalue=i' => \$evalue,
+'evalue=s' => \$evalue,
 'threads=i' => \$threads,
 'prefix=s' => \$outputPrefix,
 'blastPlus' => \$blastPlus);
