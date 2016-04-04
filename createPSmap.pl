@@ -10,6 +10,8 @@
 #
 # createPSmap.pl wrapper script to start BLAST and create PS map with java xml parser
 
+use Cwd;
+use File::Basename;
 use Getopt::Long;
 use POSIX qw/ceil/;
 
@@ -38,6 +40,7 @@ if( ((!defined $refOrg) or (!defined $db)) or (!defined $outputPrefix)){
   usage();
 }
 
+my $scriptLocation = File::Basename::dirname(Cwd::abs_path($0));
 # Loading genes from fasta file and store in hash
 my %seqs = readFASTA($refOrg);
 my @seqArr = sort keys %seqs;
@@ -104,7 +107,7 @@ while($i < (scalar(@seqArr)-1)){
     unlink($outFile);
   }
   
-  $command = "java -jar ParseXMLtoPS.jar -i ".$xmlFile." -e ".$evalue;
+  $command = "java -jar ".$scriptLocation."/ParseXMLtoPS.jar -i ".$xmlFile." -e ".$evalue;
   my $jarOut = `$command`;
   
   my @files = split("\n",$jarOut);
