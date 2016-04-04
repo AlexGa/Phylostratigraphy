@@ -146,7 +146,7 @@ unlink(@tableFiles);
 sub usage
 {
   print "Unknown option: @_\n" if ( @_ );
-  print "usage: perl createPSmap.pl [--organism organism_proteom.fasta] [--seqOffset 50] [--evalue 1e-5] [--threads 1] [--blastPlus] [--help]\n\n";
+  print "usage: perl createPSmap.pl [--organism organism_proteom.fasta] [--prefix prefix_output_files] [--seqOffset 50] [--evalue 1e-5] [--threads 1] [--blastPlus] [--help]\n\n";
   print "-o --organism \t\t FASTA file with amino acis sequences containing the proteom\n";
   print "-d --database \t\t BLAST database\n";
   print "-p --prefix \t\t prefix for output files \n";

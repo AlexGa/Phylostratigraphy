@@ -38,7 +38,7 @@ or
 
 6) Use the following command to start the Perl script<br />
 ```terminal
-perl createPSmap.pl [--organism organism_proteom.fasta] [--database blast_db] [--seqOffset 50] [--evalue 1e-5] [--threads 1]  [--blastPlus] [--help]
+perl createPSmap.pl [--organism organism_proteom.fasta] [--database blast_db] [--prefix prefix_output_files] [--seqOffset 50] [--evalue 1e-5] [--threads 1]  [--blastPlus] [--help]
 
 Arguments:
 -o --organism     FASTA file with amino acis sequences containing the proteom
