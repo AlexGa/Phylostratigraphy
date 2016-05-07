@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-Rsrc-Class-Path: ./ commons-cli-1.2.jar
-Class-Path: .
-Rsrc-Main-Class: xmlParser.CreatePSmap
-Main-Class: org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader
-
