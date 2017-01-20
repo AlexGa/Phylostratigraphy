@@ -56,7 +56,7 @@ my @tableFiles = ();
 
 my $i = 0;
 
-while($i < (scalar(@seqArr)-1)){
+while($i < scalar(@seqArr)){
   
   my $outFile = $outputPrefix."_".$prefix."_".($i+1)."_".($i+$seqOffset).".fa";
   
@@ -193,7 +193,7 @@ sub writeFASTA{
   # if no array of ids is given write the whole seqHash into fasta file
   
   if((scalar @idArr) == 0){
-    @idArr = sort keys $seqHash;
+    @idArr = sort keys %$seqHash;
   }
   
   open(OUT,">",$outFile) or die $!;
