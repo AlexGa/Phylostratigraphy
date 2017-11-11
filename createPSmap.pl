@@ -12,6 +12,7 @@
 
 use Cwd;
 use File::Basename;
+use File::Spec;
 use Getopt::Long;
 use POSIX qw/ceil/;
 
@@ -37,10 +38,16 @@ if(defined $help){
 }
 
 if( ((!defined $refOrg) or (!defined $db)) or (!defined $outputPrefix)){
-  usage();
+  print $refOrg."\n";
+  print $db."\n";
+  print $outputPrefix."\n";
+	usage();
 }
 
 my $scriptLocation = File::Basename::dirname(Cwd::abs_path($0));
+
+my $sep = File::Spec->catfile('', '');
+
 # Loading genes from fasta file and store in hash
 my %seqs = readFASTA($refOrg);
 my @seqArr = sort keys %seqs;
@@ -56,6 +63,9 @@ my @tableFiles = ();
 
 my $i = 0;
 
+my $xmlLoc = "";
+my $xmlDir;
+
 while($i < scalar(@seqArr)){
   
   my $outFile = $outputPrefix."_".$prefix."_".($i+1)."_".($i+$seqOffset).".fa";
@@ -70,8 +80,22 @@ while($i < scalar(@seqArr)){
   if(-e $xmlFile.".tbz"){
     
     print "XML file (".$xmlFile.") already exists. Skipping BLAST procedure...\n";
+    
+    $command = "tar tf ".$xmlFile.".tbz";
+    $xmlLoc = `$command`;
+    chomp $xmlLoc;
+
     $command = "tar xfvj ".$xmlFile.".tbz";
-    `$command`;
+    system($command);
+
+    $xmlFile = $xmlLoc;
+
+    if(! defined $xmlDir){
+	($vol, $directories,$f) = File::Spec->splitpath( $xmlLoc );
+	@dirs = File::Spec->splitdir( $directories );
+	$xmlDir = $dirs[0];
+    }	    
+    
     $i += $seqOffset;
     
   }else{
@@ -107,7 +131,7 @@ while($i < scalar(@seqArr)){
     unlink($outFile);
   }
   
-  $command = "java -jar ".$scriptLocation."/ParseXMLtoPS.jar -i ".$xmlFile." -e ".$evalue;
+  $command = "java -jar ".$scriptLocation.$sep."ParseXMLtoPS.jar -i ".$xmlFile." -e ".$evalue;
   my $jarOut = `$command`;
   
   my @files = split("\n",$jarOut);
@@ -117,8 +141,8 @@ while($i < scalar(@seqArr)){
   push(@psFiles,$files[1]);
   
   # deleting uncompressed xml files
+  print "Removing ".$xmlFile." after compressing to ".$xmlFile.".tbz\n";
   unlink($xmlFile);
-  
 }
 
 # Summarize all subset PS maps together
@@ -128,7 +152,6 @@ my $finalMapFile = $outputPrefix."_final_ps_map.csv";
 print "Creating final phylostratigraphic map -> ".$finalMapFile."\n";
 
 my $command = "cat ".join(" ",@psFiles)." | sort -u | grep -v \"PS;query_id\" | sed \'1 s/.*/PS;GeneID\\n&/\' > ".$finalMapFile;
-
 `$command`;
 
 # deleting subset PS maps
@@ -144,6 +167,12 @@ $command = "tar cfvj ".$tableArchive." ".join(" ",@tableFiles);
 
 # deleting uncompressed table files
 unlink(@tableFiles);
+
+if(-d $xmlDir){
+  my $curWd = `pwd`;
+  chomp $curWd;
+  print "\n---> !!! Please remove the temporary directory \'".$curWd.$sep.$xmlDir."\' which was created during untaring previous BLAST results!!! <---\n\n";
+}
 
 # print usage of Perl script
 sub usage
