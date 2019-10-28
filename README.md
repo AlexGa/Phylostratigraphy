@@ -6,7 +6,7 @@ This project builds up a pipeline for phylostratigraphy. It uses BLAST to trace 
 __Phylostratigraphy__ was introduced by <a href="http://www.sciencedirect.com/science/article/pii/S0168952507002995">Domazet-Lo&scaron;o et al. in 2007</a> to trace the evolutionary origin of protein coding genes. Thus, it groups genes by their phylogenetic origin to uncover footprints of important adaptive events in evolution.
 It is a statistical approach to reconstruct macroevolutionary trends based on the assumption of punctuated emergence of protein families.
 
-##Performing Phylostratigraphy
+## Performing Phylostratigraphy
 
 It can be performed by using the Perl script `createPSmap.pl`. The resulting phylostratigraphic map stores the phylostratum in the first column and the corresponding gene id in the second column.
 
