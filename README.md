@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/54985829.svg)](https://zenodo.org/badge/latestdoi/54985829)
+[![DOI](https://zenodo.org/badge/54985829.svg)](https://doi.org/10.5281/zenodo.3555546)
 
 Phylostratigraphic analysis
 =================
