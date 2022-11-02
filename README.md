@@ -18,7 +18,7 @@ For creating the phylostratigraphic map the following steps have to be done:
 
 2) Make sure that BLAST is installed on your machine. You can choose between BLAST (ftp://ftp.ncbi.nlm.nih.gov/blast/executables/release/LATEST/) and BLAST+ (ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
 
-3) Download the sequence database <a href="http://msbi.ipb-halle.de/download/phyloBlastDB_Drost_Gabel_Grosse_Quint.fa.tbz">phyloBlastDB_Drost_Gabel_Grosse_Quint.fa</a> used for BLAST searches and unpack it 
+3) Download the sequence database <a href="https://msbi.ipb-halle.de/download/phyloBlastDB_Drost_Gabel_Grosse_Quint.fa.tbz">phyloBlastDB_Drost_Gabel_Grosse_Quint.fa</a> used for BLAST searches and unpack it 
 `tar xfvj phyloBlastDB_Drost_Gabel_Grosse_Quint.fa.tbz`
 
 4) Format the BLAST sequence database.<br />
