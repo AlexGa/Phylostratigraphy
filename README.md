@@ -3,9 +3,9 @@
 Phylostratigraphic analysis
 =================
 
-This project builds up a pipeline for phylostratigraphy. It uses BLAST to trace the evolutionary origins based on the curated sequence database <a href="http://msbi.ipb-halle.de/download/phyloBlastDB_Drost_Gabel_Grosse_Quint.fa.tbz">phyloBlastDB_Drost_Gabel_Grosse_Quint.fa</a> published by Drost HG, Gabel A, Grosse I, Quint M. Evidence for Active Maintenance of Phylotranscriptomic Hourglass Patterns in Animal and Plant Embryogenesis. Mol. Biol. Evol. (2015) 32 (5) 1221-1231. doi:10.1093/molbev/msv012.
+This project builds up a pipeline for phylostratigraphy. It uses BLAST to trace the evolutionary origins based on the curated sequence database <a href="https://msbi.ipb-halle.de/download/phyloBlastDB_Drost_Gabel_Grosse_Quint.fa.tbz">phyloBlastDB_Drost_Gabel_Grosse_Quint.fa</a> published by Drost HG, Gabel A, Grosse I, Quint M. Evidence for Active Maintenance of Phylotranscriptomic Hourglass Patterns in Animal and Plant Embryogenesis. Mol. Biol. Evol. (2015) 32 (5) 1221-1231. doi:10.1093/molbev/msv012.
 
-__Phylostratigraphy__ was introduced by <a href="http://www.sciencedirect.com/science/article/pii/S0168952507002995">Domazet-Lo&scaron;o et al. in 2007</a> to trace the evolutionary origin of protein coding genes. Thus, it groups genes by their phylogenetic origin to uncover footprints of important adaptive events in evolution.
+__Phylostratigraphy__ was introduced by <a href="https://www.sciencedirect.com/science/article/pii/S0168952507002995">Domazet-Lo&scaron;o et al. in 2007</a> to trace the evolutionary origin of protein coding genes. Thus, it groups genes by their phylogenetic origin to uncover footprints of important adaptive events in evolution.
 It is a statistical approach to reconstruct macroevolutionary trends based on the assumption of punctuated emergence of protein families.
 
 ## Performing Phylostratigraphy
